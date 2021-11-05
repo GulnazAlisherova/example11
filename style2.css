@@ -1,0 +1,71 @@
+.important::before {
+content: "!!!";
+
+
+display: inline-block;
+width: 25px;
+height: 25px;
+background-color: turquoise;
+}
+.important::after {
+  content: "!!!";
+  display: inline-block;
+width: 25px;
+height: 25px;
+background-color: turquoise;
+}
+.ex-1::before {
+ content: "$";
+  }
+.ex-1::after {
+   content: "$";
+}
+.ex-2::before {
+   content: "@";
+}
+.ex-2::after {
+  content: "@";
+}
+.ex-3::before {
+  content: "<";
+}
+.ex-3::after {
+ content: ">";
+}   
+.ex-4::before {
+  content: "::";
+}
+.ex-4::after {
+ content: "::";
+}   
+.ex-5::before {
+  font-weight: 100;
+  content: "<привет>";
+}
+.ex-5::after {
+  font-weight: 100;
+ content: "<пока>";
+}   
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]::after{
+content:  attr(data-tooltip);
+visibility: hidden;
+position: absolute;
+
+width: 120px;
+
+top: 100%;
+left: 50%;
+margin: -60px;
+
+background-color: rgb(255, 113, 113);
+border-radius: 5px;
+padding: 5px;
+
+
+}
+[data-tooltip]:hover::after{
+  visibility: visible;
+}
